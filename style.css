@@ -279,9 +279,25 @@ textarea {
 	/*font-size: 1.125em;*/
 	font-size: 1.125em;
 	line-height: 1.6em;
-	color: #ffffff;
+	color: #e8e8e8; /*#ffffff;*/
 	background-color: #212121;
 	min-height: 768px;
+
+	/* These are technically the same, but use both */
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+
+	-ms-word-break: break-all;
+	/* This is the dangerous one in WebKit, as it breaks things wherever */
+	word-break: break-all;
+	/* Instead use this non-standard one: */
+	word-break: break-word;
+
+	/* Adds a hyphen where the word breaks, if supported (No Blink) */
+	-ms-hyphens: auto;
+	-moz-hyphens: auto;
+	-webkit-hyphens: auto;
+	hyphens: auto;
 ;
 
 }
@@ -301,6 +317,7 @@ h6 {
 
 p {
 	margin-bottom: 1.5em;
+	color: #cca464;
 }
 
 dfn,
@@ -393,7 +410,9 @@ hr {
 
 ul,
 ol {
-	margin: 0 0 1.5em 3em;
+	margin: 0 0 0em 0em;
+	color: #e8e8e8;
+	color: #f0e7d5;
 }
 
 ul {
@@ -407,7 +426,7 @@ ol {
 li > ul,
 li > ol {
 	margin-bottom: 0;
-	margin-left: 1.5em;
+	margin-left: 0em;
 }
 
 dt {
@@ -527,7 +546,7 @@ a {
 }
 
 a:visited {
-	color: rgb(255, 204, 0);
+	color: #ffcc00;
 }
 
 a:hover,
@@ -614,6 +633,7 @@ a:active {
 .main-navigation .current_page_item > a,
 .main-navigation .current_page_ancestor > a {
 	font-weight: 700;
+	color: #FFCC00;
 }
 
 .main-navigation .nav-menu > ul > li:first-child,
@@ -1099,7 +1119,7 @@ a:active {
 @media screen and (min-width: 769px){
 	.site-main{
 		/*display: block;*/
-		font-size: 1.2em;
+		font-size: 1em;
 		margin: 1.8em;
 	}
 }
